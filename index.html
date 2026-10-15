@@ -7,6 +7,22 @@
 </head>
 <body>
   <h1>Hello from GitHub Pages!</h1>
-  <p>This is my first static site deployed for free.</p>
+  <input type="text" id="txtName" placeholder="Enter your name" />
+  <button id ="btnId" onclick="showMessage()">Click Me</button>
+  //<p>This is my first static site deployed for free.</p>
+
+   <script>
+    function showMessage() {
+      const name = document.getElementById("txtName").value;
+
+      if (name.trim() === "") {
+        alert("Please enter your name first.");
+      } else {
+        alert("Hello " + name + "! Welcome to my GitHub Pages site.");
+        document.getElementById("txtName").value('');
+        document.getElementById("btnId").value('');
+      }
+    }
+  </script>
 </body>
 </html>
